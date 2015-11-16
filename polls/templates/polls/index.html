@@ -1,0 +1,22 @@
+
+
+<table border="1" width="50%" align="center">
+    <caption>Operation</caption>
+    <tr>
+        <th>Operation_text</th>
+        <th>Operation_date</th>
+        <th>Operation_summa</th>
+    <tr>
+        {% for operation in operation_list %}
+    <tr>
+        <td align="center">{{ operation.operation_text }}</td>
+        <td align="center">{{ operation.operation_date }}</td>
+        <td align="center">{{ operation.operation_summa }}</td>
+     
+     <tr>
+         
+        {% endfor %}
+        <h1>Total: {{ total }}.00</h1>
+        <a href="{% url 'polls:operation_new' %}">Add new operation?</a>
+</table>
+
